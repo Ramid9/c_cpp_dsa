@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 25,
+    "editor.minimap.maxColumn": 150,
+    "files.associations": {
+        "stdio.h": "c"
+    }
+}

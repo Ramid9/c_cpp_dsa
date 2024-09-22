@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class node{
+
+    public:
+    int data;
+    node *next;
+    
+    node(int value){
+        data = value;
+        next = NULL;
+    }
+   
+};
+int main(){
+    node * head;
+    head = NULL;
+    // insert all elements of arr at the start of the linked list
+    int arr[]={1,2,3,4,5,6};
+    
+    for(int i=0 ; i<6 ; i++){
+
+        // linded list doesnt exists
+        if(head==NULL){
+            head = new node(arr[i]);
+        }
+        // linded list exists
+        else{
+            node *temp;
+            temp = new node(arr[i]);
+            temp->next = head;
+            head = temp;
+        }
+    }
+
+    // print the linked list
+    node *temp = head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
